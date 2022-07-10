@@ -24,3 +24,4 @@ int print_porcentage(void)
 	_putchar('%');
 	return (1);
 }
+

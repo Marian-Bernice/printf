@@ -40,3 +40,4 @@ int print_bin(va_list b)
 	}
 	return (count);
 }
+

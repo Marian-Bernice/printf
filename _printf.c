@@ -1,6 +1,7 @@
 #include <stdarg.h>
 #include <unistd.h>
 #include "main.h"
+
 /**
  * find_function - function that finds formats for _printf
  * calls the corresponding function.
@@ -10,6 +11,7 @@
 int (*find_function(const char *format))(va_list)
 {
 	unsigned int i = 0;
+
 	code_f find_f[] = {
 		{"c", print_char},
 		{"s", print_string},
@@ -33,6 +35,7 @@ int (*find_function(const char *format))(va_list)
 	}
 	return (NULL);
 }
+
 /**
  * _printf - function that produces output according to a format.
  * @format: format (char, string, int, decimal)
@@ -76,4 +79,3 @@ int _printf(const char *format, ...)
 	va_end(ap);
 	return (cprint);
 }
-
